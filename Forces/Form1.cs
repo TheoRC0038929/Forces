@@ -34,4 +34,9 @@ namespace Forces
         {
             return (Math.Acos(x) * 180 / Math.PI);
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
