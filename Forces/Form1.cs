@@ -39,4 +39,40 @@ namespace Forces
         {
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            double force,angle;
+
+            try
+            {
+                force = double.Parse(textBox2.Text);
+            }
+            catch
+            {
+                MessageBox.Show(textBox2.Text + "  ,does this look like numbers");
+                force = 0;
+                
+            }
+
+            try
+            {
+                angle = double.Parse(textBox3.Text);
+            }
+            catch
+            {
+                MessageBox.Show(textBox3.Text + " ,does this look like numbers" );
+                angle = 0;
+            }
+            
+            
+
+            double Fx = force * cos(angle);
+            label2.Text = "Fx =" + Fx;
+
+            double Fy = force * sin(angle);
+            label1.Text = "Fy =" + Fy;
+
+        }
     }
+}
